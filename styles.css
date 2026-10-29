@@ -7,3 +7,6 @@
 
 
 .hero-logo{width:min(780px,88vw);margin:.4rem 0 1.5rem;line-height:0}.hero-logo img{display:block;width:100%;height:auto;filter:drop-shadow(0 10px 20px rgba(0,0,0,.42))}.hero-declaration{margin:0 0 1.15rem;color:var(--bone);font:400 clamp(1.6rem,2.6vw,2.6rem)/1 var(--display);letter-spacing:-.025em}.hero-declaration em{color:var(--amber);font-style:normal}@media(max-width:750px){.hero-logo{width:min(620px,100%);margin:.6rem 0 1.3rem}.hero-declaration{font-size:clamp(1.35rem,7vw,2rem)}}
+
+
+.hero-logo{margin-bottom:2.2rem}.hero-copy{margin-top:0}@media(max-width:750px){.hero-logo{margin-bottom:1.7rem}}
