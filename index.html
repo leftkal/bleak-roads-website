@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bleak Roads: One More Month — a turn-based village survival roguelike in development." />
+  <meta name="theme-color" content="#111311" />
+  <meta property="og:title" content="Bleak Roads: One More Month" />
+  <meta property="og:description" content="Hold your village together for one more month." />
+  <meta property="og:image" content="assets/village-at-dusk.png" />
+  <title>Bleak Roads — One More Month</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=IM+Fell+English:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="Bleak Roads home">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span>BLEAK ROADS</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#the-road">The road</a>
+      <a href="#survive">Survive</a>
+      <a href="#dispatch">Dispatch</a>
+    </nav>
+    <a class="header-cta" href="#dispatch">Follow development <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-image" role="img" aria-label="A torch-lit settlement surrounded by darkness"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content page-width">
+        <p class="eyebrow reveal">A village survival roguelike</p>
+        <h1 id="hero-title" class="reveal">One more month.<br /><em>At any cost.</em></h1>
+        <p class="hero-copy reveal">A hard season has settled over the roads. Lead a fragile village through difficult months, impossible choices, and the consequences that follow.</p>
+        <div class="hero-actions reveal">
+          <a class="button button-primary" href="#dispatch">Keep watch <span aria-hidden="true">↓</span></a>
+          <a class="button button-quiet" href="#the-road">Enter the story <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="hero-bottom page-width">
+        <span>01 — An original game in development</span>
+        <span class="scroll-cue"><i></i> Scroll to continue</span>
+      </div>
+    </section>
+
+    <section class="intro page-width" id="the-road" aria-labelledby="intro-title">
+      <div class="section-number">01 / THE ROAD</div>
+      <div class="intro-body">
+        <p class="kicker">The premise</p>
+        <h2 id="intro-title">When the world narrows,<br />every decision <em>echoes.</em></h2>
+        <p class="large-copy">Bleak Roads: One More Month is a turn-based survival experience about keeping a settlement alive when certainty is gone. Each month asks you to assess what remains, choose what matters, and face whatever is waiting beyond the village.</p>
+      </div>
+    </section>
+
+    <section class="split-feature" id="survive" aria-labelledby="survive-title">
+      <div class="feature-art village-art" role="img" aria-label="Village map at night"></div>
+      <div class="feature-copy">
+        <p class="eyebrow">Build what endures</p>
+        <h2 id="survive-title">A village is more than its walls.</h2>
+        <p>Shape the place people return to. Tend to the practical needs of a community while its future remains uncertain.</p>
+        <div class="rule"></div>
+        <p class="microcopy">Your choices carry forward.</p>
+      </div>
+    </section>
+
+    <section class="encounter page-width" aria-labelledby="encounter-title">
+      <div class="encounter-heading">
+        <p class="eyebrow">Beyond the gate</p>
+        <h2 id="encounter-title">The road always<br /><em>asks a price.</em></h2>
+      </div>
+      <div class="encounter-stage">
+        <div class="battle-art" role="img" aria-label="A desolate road and ruined battlefield"></div>
+        <div class="stage-scrim"></div>
+        <div class="token token-left"><img src="assets/levy-token.webp" alt="" /></div>
+        <div class="versus">VS</div>
+        <div class="token token-right"><img src="assets/skeleton-token.webp" alt="" /></div>
+        <div class="encounter-caption"><span>Turn-based encounters</span><span>•</span><span>Consequences that return home</span></div>
+      </div>
+    </section>
+
+    <section class="manifesto" aria-labelledby="manifesto-title">
+      <div class="page-width">
+        <p class="section-number">02 / ONE MORE MONTH</p>
+        <blockquote id="manifesto-title">“Survival is not a victory.<br />It is a promise to try again.”</blockquote>
+      </div>
+    </section>
+
+    <section class="dispatch" id="dispatch" aria-labelledby="dispatch-title">
+      <div class="dispatch-bg" aria-hidden="true"></div>
+      <div class="dispatch-content page-width">
+        <p class="eyebrow">The dispatch</p>
+        <h2 id="dispatch-title">Keep a light<br /><em>in the window.</em></h2>
+        <p>Bleak Roads is in active development. Follow along for new glimpses of the village, the road, and the stories taking shape between them.</p>
+        <a class="button button-primary" href="https://github.com/leftkal/bleak-roads-one-more-month" target="_blank" rel="noreferrer">Follow the project <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer page-width">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">✦</span><span>BLEAK ROADS</span></a>
+    <p>© <span data-year></span> Bleak Roads. All roads lead somewhere.</p>
+    <a href="https://github.com/leftkal/bleak-roads-one-more-month" target="_blank" rel="noreferrer">Development <span aria-hidden="true">↗</span></a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
