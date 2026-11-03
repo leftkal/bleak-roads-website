@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=IM+Fell+English:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261103-2" />
+  <link rel="stylesheet" href="styles.css?v=20261103-3" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -24,7 +24,6 @@
     </a>
     <nav aria-label="Primary navigation">
       <a href="#the-road">The road</a>
-      <a href="#characters">Characters</a>
       <a href="#survive">Settlement</a>
       <a href="#dispatch">Community</a>
       <a href="#dispatch">Dispatch</a>
@@ -60,33 +59,6 @@
       </div>
     </section>
 
-    <section class="character-section" id="characters" aria-labelledby="character-title">
-      <div class="page-width character-layout">
-        <div class="character-copy">
-          <p class="eyebrow">The people on the road</p>
-          <h2 id="character-title">Every Levy carries<br />a hand of <em>possibilities.</em></h2>
-          <p>Recruit a character, choose where to send them, and bring their dice into turn-based encounters. A Knife, a Pistol, and a Block die can turn a desperate plan into an opening—or leave you exposed.</p>
-          <div class="character-notes" aria-label="Current character systems">
-            <span>Recruit &amp; assign</span><span>Roll your hand</span><span>Carry consequences home</span>
-          </div>
-        </div>
-        <div class="character-console" aria-label="Interactive combat dice demonstration">
-          <div class="console-topline"><span>FIELD RECORD</span><span>COMBAT HAND / READY</span></div>
-          <div class="levy-profile">
-            <div class="levy-token"><img src="assets/levy-token.webp" alt="Levy character token" /></div>
-            <div><p class="unit-name">LEVY</p><p class="unit-detail">Arms • 2 actions</p></div>
-            <div class="unit-vital"><span>HP</span><strong>6</strong></div>
-          </div>
-          <div class="dice-hand" data-dice-hand>
-            <div class="die-wrap"><span>KNIFE</span><button class="combat-die" type="button" data-die="knife" aria-label="Knife die"><img src="assets/dice/melee.webp" alt="Melee result" /></button><small data-die-label>STRIKE</small></div>
-            <div class="die-wrap"><span>PISTOL</span><button class="combat-die" type="button" data-die="pistol" aria-label="Pistol die"><img src="assets/dice/global.webp" alt="Ranged result" /></button><small data-die-label>SHOT</small></div>
-            <div class="die-wrap"><span>BLOCK</span><button class="combat-die" type="button" data-die="block" aria-label="Block die"><img src="assets/dice/armor.webp" alt="Armor result" /></button><small data-die-label>GUARD</small></div>
-          </div>
-          <div class="roll-controls"><button class="roll-button" type="button" data-roll-dice>Roll the hand <span aria-hidden="true">↻</span></button><p data-roll-status aria-live="polite">Ready for the road.</p></div>
-        </div>
-      </div>
-    </section>
-
     <section class="split-feature" id="survive" aria-labelledby="survive-title">
       <div class="feature-art village-art" role="img" aria-label="Village map at night"></div>
       <div class="feature-copy">
@@ -106,9 +78,18 @@
       <div class="encounter-stage">
         <div class="battle-art" role="img" aria-label="A desolate road and ruined battlefield"></div>
         <div class="stage-scrim"></div>
-        <div class="token token-left"><img src="assets/levy-token.webp" alt="" /></div>
+        <div class="token token-left"><img src="assets/levy-token.webp" alt="Levy character token" /></div>
         <div class="versus">VS</div>
-        <div class="token token-right"><img src="assets/skeleton-token.webp" alt="" /></div>
+        <div class="token token-right"><img src="assets/skeleton-token.webp" alt="Skeleton enemy token" /></div>
+        <div class="combat-roll-demo" aria-label="Interactive Levy combat dice demonstration">
+          <div class="roll-demo-heading"><span>LEVY'S HAND</span><span data-roll-status aria-live="polite">Ready for the road.</span></div>
+          <div class="dice-hand" data-dice-hand>
+            <div class="die-wrap"><span>KNIFE</span><button class="combat-die" type="button" data-die="knife" aria-label="Roll Knife die"><img src="assets/dice/melee.webp" alt="Melee strike result" /></button><small data-die-label>STRIKE</small></div>
+            <div class="die-wrap"><span>PISTOL</span><button class="combat-die" type="button" data-die="pistol" aria-label="Roll Pistol die"><img src="assets/dice/global.webp" alt="Ranged shot result" /></button><small data-die-label>SHOT</small></div>
+            <div class="die-wrap"><span>BLOCK</span><button class="combat-die" type="button" data-die="block" aria-label="Roll Block die"><img src="assets/dice/armor.webp" alt="Armor result" /></button><small data-die-label>GUARD</small></div>
+          </div>
+          <button class="roll-button" type="button" data-roll-dice>Roll the hand <span aria-hidden="true">↻</span></button>
+        </div>
         <div class="encounter-caption"><span>Turn-based encounters</span><span>•</span><span>Roll, play &amp; resolve</span><span>•</span><span>Consequences return home</span></div>
       </div>
     </section>
