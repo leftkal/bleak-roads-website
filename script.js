@@ -18,18 +18,18 @@ revealItems.forEach((item) => observer.observe(item));
 
 const diceFaces = {
   knife: [
-    { image: 'assets/dice/melee.png', label: 'STRIKE', alt: 'Melee strike result' },
-    { image: 'assets/dice/melee+expose.png', label: 'EXPOSE', alt: 'Melee and expose result' },
-    { image: 'assets/dice/blank.png', label: 'BLANK', alt: 'Blank result' },
+    { image: 'assets/dice/melee.webp', label: 'STRIKE', alt: 'Melee strike result' },
+    { image: 'assets/dice/melee+expose.webp', label: 'EXPOSE', alt: 'Melee and expose result' },
+    { image: 'assets/dice/blank.webp', label: 'BLANK', alt: 'Blank result' },
   ],
   pistol: [
-    { image: 'assets/dice/global.png', label: 'SHOT', alt: 'Ranged shot result' },
-    { image: 'assets/dice/reload.png', label: 'RELOAD', alt: 'Reload result' },
-    { image: 'assets/dice/blank.png', label: 'BLANK', alt: 'Blank result' },
+    { image: 'assets/dice/global.webp', label: 'SHOT', alt: 'Ranged shot result' },
+    { image: 'assets/dice/reload.webp', label: 'RELOAD', alt: 'Reload result' },
+    { image: 'assets/dice/blank.webp', label: 'BLANK', alt: 'Blank result' },
   ],
   block: [
-    { image: 'assets/dice/armor.png', label: 'GUARD', alt: 'Armor result' },
-    { image: 'assets/dice/blank.png', label: 'BLANK', alt: 'Blank result' },
+    { image: 'assets/dice/armor.webp', label: 'GUARD', alt: 'Armor result' },
+    { image: 'assets/dice/blank.webp', label: 'BLANK', alt: 'Blank result' },
   ],
 };
 
