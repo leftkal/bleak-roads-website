@@ -49,28 +49,39 @@ function rollHand() {
   if (isRolling) return;
   isRolling = true;
   rollButton.disabled = true;
-  rollStatus.textContent = 'Rolling the hand…';
-  const timers = dice.map((die, dieIndex) => setInterval(() => {
+  rollStatus.textContent = 'The dice are in motion…';
+  const outcomes = new Array(dice.length);
+  let resolvedDice = 0;
+
+  dice.forEach((die, index) => {
     const faces = diceFaces[die.dataset.die];
-    setDieFace(die, faces[Math.floor(Math.random() * faces.length)]);
-  }, 65 + dieIndex * 12));
-  dice.forEach((die) => die.classList.add('is-rolling'));
-  window.setTimeout(() => {
-    const outcome = [];
-    dice.forEach((die, index) => {
-      clearInterval(timers[index]);
-      const faces = diceFaces[die.dataset.die];
-      const face = faces[Math.floor(Math.random() * faces.length)];
-      setDieFace(die, face);
-      die.classList.remove('is-rolling');
-      die.classList.add('is-landed');
-      window.setTimeout(() => die.classList.remove('is-landed'), 400);
-      outcome.push(face.label.toLowerCase());
-    });
-    rollStatus.textContent = `Hand resolved: ${outcome.join(' • ')}.`;
-    rollButton.disabled = false;
-    isRolling = false;
-  }, 920);
+    const startDelay = Math.floor(Math.random() * 210);
+    const rollDuration = 620 + Math.floor(Math.random() * 620);
+    const cadence = 50 + Math.floor(Math.random() * 75);
+    const finalFace = faces[Math.floor(Math.random() * faces.length)];
+
+    window.setTimeout(() => {
+      die.classList.add('is-rolling');
+      const faceTimer = window.setInterval(() => {
+        setDieFace(die, faces[Math.floor(Math.random() * faces.length)]);
+      }, cadence);
+
+      window.setTimeout(() => {
+        window.clearInterval(faceTimer);
+        setDieFace(die, finalFace);
+        die.classList.remove('is-rolling');
+        die.classList.add('is-landed');
+        window.setTimeout(() => die.classList.remove('is-landed'), 400);
+        outcomes[index] = finalFace.label.toLowerCase();
+        resolvedDice += 1;
+        if (resolvedDice === dice.length) {
+          rollStatus.textContent = `Hand resolved: ${outcomes.join(' • ')}.`;
+          rollButton.disabled = false;
+          isRolling = false;
+        }
+      }, rollDuration);
+    }, startDelay);
+  });
 }
 
 rollButton?.addEventListener('click', rollHand);
